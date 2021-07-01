@@ -44,7 +44,14 @@ function attack(type) {
   currentTarget.hits++
   let choice = attacks[type]
   console.log(choice.damage)
-  currentTarget.health = currentTarget.health - choice.damage + addMods()
+  let change = currentTarget.health - choice.damage + addMods()
+  if (change > 100) {
+    change = 100
+  }
+  if (change < 0) {
+    change = 0
+  }
+  currentTarget.health = change
 
   drawHealth()
 }

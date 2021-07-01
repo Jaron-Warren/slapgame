@@ -8,32 +8,44 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
     integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
   <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="darkly.css">
   <link rel="stylesheet" href="style.css">
   <title>Slap Game</title>
 </head>
 
 <body>
-  <header>
-    <h1>Slap Game</h1>
-    <span>Health: <span id="health"></span></span>
-    <span>Name: <span id="name"></span></span>
-    <span>Hit Count: <span id="hits"></span></span>
-  </header>
-  <main class="container">
+  <header class="bg-primary container-fluid">
     <div class="row">
+      <h1 class="col-12">Slap Game</h1>
+    </div>
+  </header>
+  <main class="container-fluid">
+    <div class="row mt-5 justify-content-center">
       <div class="col-5">
-        <img class="w-200" src="//placehold.it/200x300" alt="placeholder">
+        <img class="w-200 custom-height"
+          src="https://images.unsplash.com/photo-1516192518150-0d8fee5425e3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1952&q=80"
+          alt="placeholder">
+        <div class="row justify-content-center d-flex flex-column">
+          <span class="col-4">Health: <span id="health"></span></span>
+          <span class="col-4">Name: <span id="name"></span></span>
+          <span class="col-4">Hit Count: <span id="hits"></span></span>
+        </div>
+      </div>
+      <div class="bg-light col-5">
+        <div class="row text-center h-100">
+          <h2 class="col-6 d-flex align-items-center justify-content-center">Attack!</h2>
+          <h2 class="col-6 d-flex align-items-center justify-content-center">Defend!</h2>
+          <div class="col-6 d-flex flex-column justify-content-around" id="attack-buttons">
+          </div>
+          <div class="col-6 d-flex flex-column justify-content-around" id="weapon-buttons">
+          </div>
+        </div>
       </div>
     </div>
   </main>
-  <footer class="container">
-    <div class="row">
-      <div class="col-12" id="attack-buttons">
-
-      </div>
-      <div class="col-12" id="weapon-buttons">
-
-      </div>
+  <footer class="container-fluid bg-primary py-2">
+    <div class="row justify-content-center text-center">
+      <h3>Created by Jaron and Amanda!</h3>
     </div>
   </footer>
   <script src="script.js"></script>
